@@ -33,7 +33,7 @@
         <li><b>name</b>: Name the user wants for this image to have</li>
     </ul>
     <p>The <b>imgbase64</b> field expects the HTML Base 64 encoded version for image data that follows the following format: </p>
-    <p><code>data:[<mediatype>];base64,<data></code></p>
+    <p><code>data:[mediatype];base64,</code></p>
     <p>Example:</p>
     <p><code>data:image/png;base64,{base64 pure code starts from here on}</code></p>
     <p>A successful response for the <b>/upload</b> route will contain this following JSON field:</p>
@@ -56,6 +56,7 @@
     <p>To trigger a successful response from the <b>/pics</b> route:</p>
     <ol >
         <li>Trigger a GET request to <code>https://{link-to-api}/pics/{image-filename}</code></li>
+        <li>Receive the image</li>
     </ol>
 </div>
 
