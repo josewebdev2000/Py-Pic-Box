@@ -20,10 +20,11 @@
 
 ## Mechanism
 <div>
-    <p>My Web API has two routes:</p>
+    <p>My Web API has three routes:</p>
     <ul style="list-style-type: square;">
-        <li><b>/upload</b>: Route used to upload images to the server</li>
-        <li><b>/delete</b>: Route used to delete images to the server</li>
+        <li><b>/upload</b>: Route used to upload images to the server (POST Request Only)</li>
+        <li><b>/delete</b>: Route used to delete images to the server (POST Request Only)</li>
+        <li><b>/pics: Route used to show images stored in the web server (GET Request Only)</b></li>
     </ul>
     <p>My Web API takes a JSON string with the following fields for the <b>/upload</b> route:</p>
     <ul style="list-style-type: square;">
@@ -31,6 +32,10 @@
         <li><b>imgbase64</b>: Base 64 Code that contains the data that describes the image</li>
         <li><b>name</b>: Name the user wants for this image to have</li>
     </ul>
+    <p>The <b>imgbase64</b> field expects the HTML Base 64 encoded version for image data that follows the following format: </p>
+    <p><code>data:[<mediatype>];base64,<data></code></p>
+    <p>Example:</p>
+    <p><code>data:image/png;base64,{base64 pure code starts from here on}</code></p>
     <p>A successful response for the <b>/upload</b> route will contain this following JSON field:</p>
     <ul style="list-style-type: square;">
         <li><b>img_url</b>: URL to the image the user just uploaded through Base 64 Code</li>
@@ -48,6 +53,10 @@
     <ul style="list-style-type: square;">
         <li><b>error</b>: Description of the error raised</li>
     </ul>
+    <p>To trigger a successful response from the <b>/pics</b> route:</p>
+    <ol >
+        <li>Trigger a GET request to <code>https://{link-to-api}/pics/{image-filename}</code></li>
+    </ol>
 </div>
 
 ## Skills
