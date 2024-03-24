@@ -55,7 +55,7 @@
     </ul>
     <p>To trigger a successful response from the <b>/pics</b> route:</p>
     <ol >
-        <li>Trigger a GET request to <code>https://{link-to-api}/pics/{image-filename}</code></li>
+        <li>Trigger a GET request to <code>https://py-pic-box.vercel.app/pics/{image-filename}</code></li>
         <li>Receive the image</li>
     </ol>
 </div>
