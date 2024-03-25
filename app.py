@@ -47,7 +47,7 @@ def home():
 @app.route("/pics/<filename>", methods = ["GET"])
 def pics(filename):
     try:
-        return send_file(f"pics/{filename}")
+        return send_file(f"tmp/{filename}")
     
     except FileNotFoundError:
         abort(404)
