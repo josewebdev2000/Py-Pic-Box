@@ -1,4 +1,2 @@
-__pycache__
-py_pic_venv
 .env
-.vercel
+vendor
